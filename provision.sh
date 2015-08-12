@@ -6,7 +6,3 @@ pip install -r /vagrant/requirements.txt
 
 echo "Setting executable permission on start script"
 chmod +x /vagrant/start.sh
-
-
-
-

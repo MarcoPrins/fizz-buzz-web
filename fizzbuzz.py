@@ -4,6 +4,7 @@ from flask_bootstrap import Bootstrap
 class Entry():
   def __init__(self, number):
     self.number = number
+    self.color = "black"
     if (number%3 == 0):
       self.fizz = True
       if (number%5 == 0):
