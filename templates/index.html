@@ -1,0 +1,36 @@
+{% extends "bootstrap/base.html" %}
+{% block title %}FizzBuzz{% endblock %}
+
+{% block content %}
+  <div class="container">
+    <h1>Example of FizzBuzz</h1>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Number</th>
+          <th>Fizz</th>
+          <th>Buzz</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        {% for entry in entries %}
+          <tr style="color:{{entry.color}}">
+            <td style='color:black'>{{ entry.number }}</td>
+            <td>
+              {% if entry.fizz %}
+                <span class="glyphicon glyphicon-ok"></span>
+              {% endif %}
+            </td>
+            <td>
+              {% if entry.buzz %}
+                <span class="glyphicon glyphicon-ok"></span>
+              {% endif %}
+            </td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+{% endblock %}
